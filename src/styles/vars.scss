@@ -1,0 +1,20 @@
+
+
+// Breakpoints
+// Extra small screen / phone
+$screen-xs:                  480px;
+// Small screen / tablet
+$screen-sm:                  768px;
+// Medium screen / desktop
+$screen-md:                  992px;
+// Large screen / wide desktop
+$screen-lg:                  1280px;
+
+// Breakpoints map
+$breakpoints: (
+    small : $screen-xs,
+    medium: $screen-md,
+    large : $screen-lg
+);
+
+$wrapper-width: 	$screen-lg;

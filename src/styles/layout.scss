@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+	max-width: $wrapper-width;
+	margin:auto;
+	display: grid;
+	grid-template-areas: "header" "galery" "contact" "footer";
+	grid-template-rows: auto auto auto auto;
+	.header {
+		grid-area: header;
+	}
+	.galery {
+		grid-area: galery;
+		display: grid;
+		grid-template-columns: 25% 25% 25% 25%;
+		background: black;
+		logo {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+		galeryitems {
+			background: red;
+		}
+	}
+	.contact {
+		grid-area: contact;
+	}
+	.footer {
+		grid-area: footer;
+	}
+}
