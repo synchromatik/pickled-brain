@@ -1,15 +1,22 @@
 import React from 'react'
-import ImageList from './ImageList.js'
+import { useStateValue } from '../state';
 
-export default function Images() {
-
+function Images(props) {
+    const [, dispatch] = useStateValue();
     return (
-        <React.Fragment>
-            {ImageList.map(image => (
-                <galeryitems key={image.src} >
-                    {image.url}
-                </galeryitems>
-            ))}
-        </React.Fragment>
+        <galeryitems>
+            <img 
+                src={props.url} 
+                className="image" 
+                alt={props.url} 
+                onClick={() => dispatch({
+                    type: 'updateModal',
+                    newModal: { showModal: true },
+                    newIndex: props.id
+                })}
+            />
+        </galeryitems>
     )
 }
+
+export default Images
