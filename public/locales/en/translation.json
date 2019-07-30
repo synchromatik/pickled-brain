@@ -1,0 +1,14 @@
+{
+    "contactPage": {
+        "header": "Contact Us",
+        "subheader": "Use contact form on a right to get it touch. If you are really in a hurry or close to us, give us a call via phone",
+        "info": "Info",
+        "studioName": "Pickled Brain Tattoo Studio",
+        "phone": "Phone",
+        "email": "Email",
+        "adress": "Adress",
+        "hours": "Work Hours",
+        "weekdays": "Monday - Friday : 11am - 19pm",
+        "weekends": "Saturday/Sunday: if needed, call us"
+    }
+}
