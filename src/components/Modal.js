@@ -3,7 +3,7 @@ import { useStateValue } from '../state'
 
 
 const Modal = (props) => {
-    const [{ modal, index, images }, dispatch] = useStateValue();
+    const [{index}, dispatch] = useStateValue();
     
     return (
         <div>
