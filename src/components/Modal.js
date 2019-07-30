@@ -14,7 +14,10 @@ const Modal = (props) => {
 
                 <button
                     type="button"
-                    
+                    onClick={() => dispatch({
+                        type: 'updateIndex',
+                        newIndex: index + 1
+                    })}
                 >
                     Next
                 </button>
