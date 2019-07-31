@@ -10,5 +10,11 @@
         "hours": "Work Hours",
         "weekdays": "Monday - Friday : 11am - 19pm",
         "weekends": "Saturday/Sunday: if needed, call us"
+    },
+    "contactForm": {
+        "name": "Your Name",
+        "email": "Your Email - so we can replay",
+        "messageLabel": "Message",
+        "message": "Let us know what you need"
     }
 }

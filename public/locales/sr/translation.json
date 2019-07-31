@@ -10,5 +10,11 @@
         "hours": "Radno vreme",
         "weekdays": "Ponedeljak - Petak : 11am - 19pm",
         "weekends": "Subota/Nedelja: po potrebi, zakažite."
+    },
+    "contactForm": {
+        "name": "Ime",
+        "email": "Email",
+        "messageLabel": "Poruka",
+        "message": "Opisite nam sta vam treba"
     }
 }

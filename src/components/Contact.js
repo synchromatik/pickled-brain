@@ -1,33 +1,22 @@
 import React from 'react'
+import ContactForm from '../components/ContactForm'
+import Info from './Info'
 import { useTranslation } from 'react-i18next';
+import LangSwitcher from './LangSwitcher';
 
 const Contact = () => {
-    const { t, i18n } = useTranslation();
-
-    const changeLanguage = lng => {
-        i18n.changeLanguage(lng);
-    };
+    const { t } = useTranslation()
     return (
         <React.Fragment>
-           <contact>
+            <contact>
                 <info>
-                    <h1>{t('contactPage.header')}</h1>
-                    <p>{t('contactPage.subheader')}</p>
-                    <h2>{t('contactPage.info')}:</h2>
-                    <h3>{t('contactPage.studioName')}</h3>
-                    <p>{t('contactPage.phone')}: + 381 63 8979099 </p>
-                    <p>{t('contactPage.email')} : studio pickled-brain.com</p>
-                    <p>{t('contactPage.adress')}: Pariska 13, 11000 Belgrade, Serbia</p>
-                    <h2>{t('contactPage.hours')}:</h2>
-                    <p>{t('contactPage.weekdays')}</p>
-                    <p>{t('contactPage.weekends')}</p>
-                    <button onClick={() => changeLanguage('sr')}>sr</button>
-                    <button onClick={() => changeLanguage('en')}>en</button>
+                    <LangSwitcher />
+                    <Info t={t}/>
                 </info>
                 <form>
-                    cotact form
+                    <ContactForm t={t}/>
                 </form>
-           </contact>
+            </contact>
         </React.Fragment>
     )
 }

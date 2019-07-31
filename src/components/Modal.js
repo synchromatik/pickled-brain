@@ -4,9 +4,9 @@ import { useStateValue } from '../state'
 
 const Modal = (props) => {
     const [{index}, dispatch] = useStateValue();
-    const changeImage = (direction) => {
-        console.log(direction)
-    }
+    // const changeImage = (direction) => {
+    //     console.log(direction)
+    // }
     return (
         <div>
             <div className="modal">

@@ -2,11 +2,8 @@ import React, { Suspense} from 'react';
 import Gallery from './Gallery'
 import Contact from './Contact'
 import ImageList from './ImageList.js'
-
-import { StateProvider } from '../state';
-
-
-import '../styles/main.scss';
+import { StateProvider } from '../state'
+import '../styles/main.scss'
 
 // loading component for suspense fallback
 const Loader = () => (
@@ -16,13 +13,16 @@ const Loader = () => (
 );
 
 function App() {
+
 	const initialState = {
 		modal: { 
 			showModal: false
 		},
 		images: ImageList,
-		index: null
+		index: null,
+		lang: 'en'
 	};
+
 	const reducer = (state, action) => {
 		switch (action.type) {
 			case 'updateModal':
@@ -36,28 +36,31 @@ function App() {
 					...state,
 					index: action.newIndex
 				};
+			case 'updateLang':
+				return {
+					...state,
+					lang: action.newLang
+				}
 			default:
 				return state;
 		}
 	};
+	
 	return (
-		<div>
-			<StateProvider initialState={initialState} reducer={reducer}>
-				<Suspense fallback={<Loader />}>
-					<div className="wrapper">
-						<header className="header">
-							header
+		<StateProvider initialState={initialState} reducer={reducer}>
+			<Suspense fallback={<Loader />}>
+				<div className="wrapper">
+					<header className="header">
+						header
 					</header>
-						<Gallery />
-						<Contact />
-
-						<footer className="footer">
-							footer
+					<Gallery />
+					<Contact />
+					<footer className="footer">
+						footer
 					</footer>
-					</div>
-				</Suspense>
-			</StateProvider>
-		</div>
+				</div>
+			</Suspense>
+		</StateProvider>
 	);
 }
 

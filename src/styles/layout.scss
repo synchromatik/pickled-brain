@@ -29,8 +29,10 @@ body {
 			background: red;
 		}
 	}
-	.contact {
+	contact {
 		grid-area: contact;
+		display: grid;
+		grid-template-columns: 50% 50%;
 	}
 	.footer {
 		grid-area: footer;
