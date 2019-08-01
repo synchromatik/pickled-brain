@@ -6,7 +6,8 @@ function ContactForm(props) {
     const { value: name, bind: bindName, reset: resetName } = useInput('');
     const { value: email, bind: bindEmail, reset: resetEmail } = useInput('');
     const { value: message, bind: bindMessage, reset: resetMessage } = useInput('');
-
+    const { t } = useTranslation()
+    
     const handleSubmit = (evt) => {
         evt.preventDefault();
         alert(`Submitting Name ${name} ${email} ${message}`);
@@ -14,7 +15,7 @@ function ContactForm(props) {
         resetEmail();
         resetMessage();
     }
-    const { t } = useTranslation();
+    
     return (
         <div>
             <form onSubmit={handleSubmit}>

@@ -3,7 +3,7 @@ import { useStateValue } from '../state'
 import { useTranslation } from 'react-i18next';
 
 const LangSwitcher = () => {
-    const [, dispatch] = useStateValue()
+    const [{lang}, dispatch] = useStateValue()
     const { i18n } = useTranslation()
     
     const changeLanguage = lng => {
@@ -12,6 +12,7 @@ const LangSwitcher = () => {
 
     return (
         <div>
+            {lang}
             <button 
                 onClick={() => changeLanguage('sr')}
             >
