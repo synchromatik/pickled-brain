@@ -13,9 +13,9 @@ const Contact = () => {
                     <LangSwitcher />
                     <Info t={t}/>
                 </info>
-                <form>
+                <contactform>
                     <ContactForm t={t}/>
-                </form>
+                </contactform>
             </contact>
         </React.Fragment>
     )

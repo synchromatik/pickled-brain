@@ -15,6 +15,7 @@
         "name": "Ime",
         "email": "Email",
         "messageLabel": "Poruka",
-        "message": "Opisite nam sta vam treba"
+        "message": "Opisite nam sta vam treba",
+        "send": "Posalji"
     }
 }

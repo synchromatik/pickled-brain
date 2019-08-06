@@ -4,8 +4,7 @@
   "private": true,
   "homepage": "https://synchromatik.github.io/pickled-brain",
   "dependencies": {
-    "@sendgrid/mail": "^6.4.0",
-    "emailjs-com": "^2.3.2",
+    "axios": "^0.19.0",
     "framer-motion": "^1.4.0",
     "gh-pages": "^2.0.1",
     "i18next": "^17.0.7",
