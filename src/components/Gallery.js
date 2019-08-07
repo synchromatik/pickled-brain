@@ -10,10 +10,10 @@ function Gallery() {
     
     return (
         <React.Fragment>
-            <galery className="galery">
-                <logo>
+            <div className="galery">
+                <div className="logo">
                     logo
-                </logo>
+                </div>
 
                 {images.map(image => (
                     <Images
@@ -60,7 +60,7 @@ function Gallery() {
                             </motion.div>
                         </Modal> 
                     </div> : null}
-            </galery>
+            </div>
         </React.Fragment>
     )
 }

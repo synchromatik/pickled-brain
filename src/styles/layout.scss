@@ -21,15 +21,15 @@ body {
 		display: grid;
 		grid-template-columns: 25% 25% 25% 25%;
 		background: black;
-		logo {
+		.logo {
 			grid-column-start: 1;
 			grid-column-end: 3;
 		}
-		galeryitems {
+		.item {
 			background: red;
 		}
 	}
-	contact {
+	.contact {
 		grid-area: contact;
 		display: grid;
 		grid-template-columns: 50% 50%;

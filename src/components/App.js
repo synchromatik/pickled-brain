@@ -1,10 +1,9 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense } from 'react';
 import Gallery from './Gallery'
 import Contact from './Contact'
 import ImageList from './ImageList.js'
 import { StateProvider } from '../state'
 import '../styles/main.scss'
-import { useTranslation } from 'react-i18next'
 
 // loading component for suspense fallback
 const Loader = () => (

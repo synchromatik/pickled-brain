@@ -1,18 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import useInput from './useInput'
 import { useTranslation } from 'react-i18next';
 import axios from "axios"
 
 function ContactForm(props) {
+    // Input hooks - useInput hooks
     const { value: name, bind: bindName, reset: resetName } = useInput('')
     const { value: email, bind: bindEmail, reset: resetEmail } = useInput('')
     const { value: message, bind: bindMessage, reset: resetMessage } = useInput('')
+
+    // Status of form message local hooks
+    const [status, setStatus] = useState({ error: false, message: null, success: null})
+
+    // Translations
     const { t } = useTranslation()
     
+    // Submiting form
     const handleSubmit = (evt) => {
         evt.preventDefault()
 
-        console.log(`Submitting Name ${name} ${email} ${message}`)
+        if (process.env.NODE_ENV === 'development') {
+            console.log(`Submitting Name ${name} ${email} ${message}`)
+        }
 
         let data = JSON.stringify({
             name: name,
@@ -20,12 +29,28 @@ function ContactForm(props) {
             message: message
         })
 
-        axios.post('http://localhost:3001/email', data, {
-            headers: {
-                'Content-Type': 'application/json',
-                "Access-Control-Allow-Origin": "*"
-            }
-        })
+        axios
+            .post(process.env.REACT_APP_NODEJS_BACKEND, data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    "Access-Control-Allow-Origin": "*"
+                }
+            })
+            .then (response => {
+                if (process.env.NODE_ENV === 'development') {
+                    console.log(response)
+                }
+                // if html5 validation fails
+                if (response.data.message === `'from' parameter is not a valid address. please check documentation`) {
+                    setStatus({ error: true, message: t('contactForm.errorMessage') })
+                } else if (response.data === 'Poruka poslata') {
+                    setStatus({ error: false, message: null, success: true })
+                }
+            })
+            .catch(err => 
+                console.log(err)
+                //setStatus({ error: true})
+            );
 
         resetName()
         resetEmail()
@@ -35,17 +60,19 @@ function ContactForm(props) {
     return (
         <div>
             <form onSubmit={handleSubmit}>
+                {status.error ? <p> {status.message}</p> : null}
+                {status.success ? <p> uspesno poslata poruka </p> : null}
                 <label>
                     {t('contactForm.name')}:
-                <input type="text" placeholder={t('contactForm.name')} {...bindName} />
+                <input type="text" name="name" placeholder={t('contactForm.name')} {...bindName} required/>
                 </label>
                 <label>
                     Email:
-                <input type="text" placeholder={t('contactForm.email')} {...bindEmail} />
+                <input type="email" name="email" placeholder={t('contactForm.email')} {...bindEmail} required/>
                 </label>
                 <label>
                     {t('contactForm.messageLabel')}:
-                <input type="text" placeholder={t('contactForm.message')} {...bindMessage} />
+                <input type="text" placeholder={t('contactForm.message')} {...bindMessage} required/>
                 </label>
                 <input type="submit" value={t('contactForm.send')} />
             </form>

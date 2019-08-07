@@ -16,6 +16,7 @@
         "email": "Email",
         "messageLabel": "Poruka",
         "message": "Opisite nam sta vam treba",
-        "send": "Posalji"
+        "send": "Posalji",
+        "errorMessage": "Proverite formu i popunite sva polja pravilno"
     }
 }

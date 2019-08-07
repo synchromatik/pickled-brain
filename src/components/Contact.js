@@ -7,17 +7,15 @@ import LangSwitcher from './LangSwitcher';
 const Contact = () => {
     const { t } = useTranslation()
     return (
-        <React.Fragment>
-            <contact>
-                <info>
-                    <LangSwitcher />
-                    <Info t={t}/>
-                </info>
-                <contactform>
-                    <ContactForm t={t}/>
-                </contactform>
-            </contact>
-        </React.Fragment>
+        <div className="contact">
+            <div>
+                <LangSwitcher />
+                <Info t={t}/>
+            </div>
+            <div>
+                <ContactForm t={t}/>
+            </div>
+        </div>
     )
 }
 
