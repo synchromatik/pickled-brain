@@ -4,7 +4,7 @@ import { useStateValue } from '../state';
 function Images(props) {
     const [, dispatch] = useStateValue();
     return (
-        <galeryitems>
+        <galeryitems className="gallery-item">
             <img 
                 src={props.url} 
                 className="image" 
