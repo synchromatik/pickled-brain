@@ -45,16 +45,17 @@ function ContactForm(props) {
                     setStatus({ error: true, message: t('contactForm.errorMessage') })
                 } else if (response.data === 'Poruka poslata') {
                     setStatus({ error: false, message: null, success: true })
+                    resetName()
+                    resetEmail()
+                    resetMessage()
                 }
             })
-            .catch(err => 
-                console.log(err)
-                //setStatus({ error: true})
+            .catch(err => {
+                    if (process.env.NODE_ENV === 'development') {
+                        console.log(err)
+                    }
+                }
             );
-
-        resetName()
-        resetEmail()
-        resetMessage()
     }
    
     return (
