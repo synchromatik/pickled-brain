@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import Gallery from './Gallery'
 import Contact from './Contact'
 import ImageList from './ImageList.js'
+import Mapa from './Map'
 import { StateProvider } from '../state'
 import '../styles/main.scss'
 
@@ -56,7 +57,7 @@ function App() {
 					<Gallery />
 					<Contact />
 					<footer className="footer">
-						footer
+						<Mapa />
 					</footer>
 				</div>
 			</Suspense>

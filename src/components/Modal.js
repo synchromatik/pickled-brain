@@ -8,39 +8,37 @@ const Modal = (props) => {
     //     console.log(direction)
     // }
     return (
-        <div>
-            <div className="modal">
-                {props.children}
+        <div className="modal__content">
+            {props.children}
 
-                <button
-                    type="button"
-                    onClick={() => dispatch({
-                        type: 'updateIndex',
-                        newIndex: index + 1
-                    })}
-                >
-                    Next
+            <button
+                type="button"
+                onClick={() => dispatch({
+                    type: 'updateIndex',
+                    newIndex: index + 1
+                })}
+            >
+                Next
                 </button>
 
-                <button
-                    onClick={() => dispatch({
-                        type: 'updateIndex',
-                        newIndex: index - 1
-                    })}
-                >
-                    prev 
+            <button
+                onClick={() => dispatch({
+                    type: 'updateIndex',
+                    newIndex: index - 1
+                })}
+            >
+                prev
                 </button>
 
-                <button 
-                    type="button"
-                    onClick={() => dispatch({
-                        type: 'updateModal',
-                        newModal: { showModal: false }
-                    })}
-                >
-                    close
+            <button
+                type="button"
+                onClick={() => dispatch({
+                    type: 'updateModal',
+                    newModal: { showModal: false }
+                })}
+            >
+                close
                 </button>
-            </div>
         </div>
     )
 }

@@ -2,8 +2,9 @@ import React from 'react'
 import Images from './Images'
 import Modal from './Modal'
 import { motion } from 'framer-motion'
+import { useStateValue } from '../state'
 
-import { useStateValue } from '../state';
+import { ReactComponent as Logo} from '../images/logo.svg'
 
 function Gallery() {
     const [{ modal, index, images }, dispatch] = useStateValue();
@@ -12,7 +13,7 @@ function Gallery() {
         <React.Fragment>
             <div className="galery">
                 <div className="logo">
-                    logo
+                    <Logo />
                 </div>
 
                 {images.map(image => (
