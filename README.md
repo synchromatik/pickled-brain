@@ -30,3 +30,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run deploy`
 
 **Build and deploy preview to: https://synchromatik.github.io/pickled-brain**
+
+## 3rd Party Services
+
+For access tokens
+
+- Mapbox Map tiles <br>
+- Mailgun SMTP **via nodejs backend https://github.com/synchromatik/pb-mailer**
