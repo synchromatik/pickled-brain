@@ -1,7 +1,7 @@
 body {
     margin: 0;
 	height: 100%;
-	font-family: 'DM Serif Display', serif;
+	font-family: $font-family-pickled-brain;
 	background: $gray;
 }
 
@@ -23,18 +23,18 @@ body {
 		grid-area: galery;
 		display: grid;
 		grid-template-columns: 25% 25% 25% 25%;
-		background: black;
-		.logo {
+		.brand {
 			grid-column-start: 1;
-			grid-column-end: 3;
+			grid-column-end: 5;
 			grid-row-start: 1;
-			grid-row-end: 3;
-		}
-		.item {
-			filter: grayscale(100%);
-			&:hover {
-				filter: grayscale(0%);
-			}
+			grid-row-end: 2;
+
+            @media (min-width: $screen-md) {
+                grid-column-start: 1;
+				grid-column-end: 3;
+				grid-row-start: 1;
+				grid-row-end: 3;
+            }
 		}
 	}
 	.contact {
