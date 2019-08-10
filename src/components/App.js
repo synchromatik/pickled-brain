@@ -5,6 +5,7 @@ import ImageList from './ImageList.js'
 import Mapa from './Map'
 import { StateProvider } from '../state'
 import '../styles/main.scss'
+import LangSwitcher from './LangSwitcher'
 
 // loading component for suspense fallback
 const Loader = () => (
@@ -23,6 +24,7 @@ function App() {
 		index: null,
 		lang: 'en'
 	};
+
 
 	const reducer = (state, action) => {
 		switch (action.type) {
@@ -51,9 +53,7 @@ function App() {
 		<StateProvider initialState={initialState} reducer={reducer} >
 			<Suspense fallback={<Loader />}>
 				<div className="wrapper">
-					<header className="header">
-						header
-					</header>
+					<LangSwitcher />
 					<Gallery />
 					<Contact />
 					<footer className="footer">

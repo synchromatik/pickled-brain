@@ -8,12 +8,14 @@
             flex-grow:2;
         }
         #Layer_1 {
-            
             display: block;
             margin: auto;
-            width: 120px;
+            width: 220px;
             @media (min-width: $screen-xs) {
                 width: 320px;
+            }
+            @media (min-width: $screen-sm) {
+                width: 180px;
             }
             @media (min-width: $screen-md) {
                 width: 420px;

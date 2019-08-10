@@ -22,17 +22,21 @@ body {
 	.galery {
 		grid-area: galery;
 		display: grid;
-		grid-template-columns: 25% 25% 25% 25%;
+		grid-template-columns: 50% 50%;
+		@media (min-width: $screen-sm) {
+			grid-template-columns: 25% 25% 25% 25%;
+		}
 		.brand {
 			grid-column-start: 1;
 			grid-column-end: 5;
 			grid-row-start: 1;
 			grid-row-end: 2;
-
-            @media (min-width: $screen-md) {
-                grid-column-start: 1;
+			 @media (min-width: $screen-sm) {
 				grid-column-end: 3;
-				grid-row-start: 1;
+				grid-row-end: 2;
+            }
+            @media (min-width: $screen-md) {
+				grid-column-end: 3;
 				grid-row-end: 3;
             }
 		}
