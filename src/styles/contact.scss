@@ -1,4 +1,12 @@
-form {
-    display: flex;
-    flex-direction: column;
+.contact {
+
+    &__info, 
+    &__form {
+        padding: 100px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -1,11 +1,18 @@
 .galery {
     background: black;
     .brand {
-        background: red;
         display: flex;
         align-items:center;
         .logo {
             flex-grow:2;
+            margin-top: -35px;
+            z-index: 998;
+            margin-bottom: 20px;
+            @media (min-width: $screen-xs) {
+                margin-top: auto;
+                z-index: 0;
+                margin-bottom: auto;
+            }
         }
         #Layer_1 {
             display: block;

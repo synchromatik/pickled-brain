@@ -44,7 +44,10 @@ body {
 	.contact {
 		grid-area: contact;
 		display: grid;
-		grid-template-columns: 50% 50%;
+		grid-template-columns: 100%;
+		@media (min-width: $screen-md) {
+			grid-template-columns: 50% 50%;
+		}
 	}
 	.footer {
 		grid-area: footer;

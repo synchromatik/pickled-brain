@@ -7,12 +7,8 @@ const Contact = () => {
     const { t } = useTranslation()
     return (
         <div className="contact">
-            <div>
-                <Info t={t}/>
-            </div>
-            <div>
-                <ContactForm t={t}/>
-            </div>
+            <Info t={t} />
+            <ContactForm t={t} />
         </div>
     )
 }

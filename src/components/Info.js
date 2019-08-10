@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 function Info(props) {
     const { t } = useTranslation();
     return (
-        <div>
+        <div className="contact__info">
             <h1>{t('contactPage.header')}</h1>
             <p>{t('contactPage.subheader')}</p>
             <h2>{t('contactPage.info')}:</h2>

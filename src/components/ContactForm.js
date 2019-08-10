@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import useInput from './useInput'
+import StyledLoading from './Loading'
 import { useTranslation } from 'react-i18next';
 import axios from "axios"
 
@@ -10,7 +11,7 @@ function ContactForm(props) {
     const { value: message, bind: bindMessage, reset: resetMessage } = useInput('')
 
     // Status of form message local hooks
-    const [status, setStatus] = useState({ error: false, message: null, success: null})
+    const [status, setStatus] = useState({ error: false, message: null, success: null, isSending: false})
 
     // Translations
     const { t } = useTranslation()
@@ -18,6 +19,7 @@ function ContactForm(props) {
     // Submiting form
     const handleSubmit = (evt) => {
         evt.preventDefault()
+        setStatus({ isSending: true })
 
         if (process.env.NODE_ENV === 'development') {
             console.log(`Submitting Name ${name} ${email} ${message}`)
@@ -28,6 +30,8 @@ function ContactForm(props) {
             email: email,
             message: message
         })
+
+        
 
         axios
             .post(process.env.REACT_APP_NODEJS_BACKEND, data, {
@@ -42,9 +46,9 @@ function ContactForm(props) {
                 }
                 // if html5 validation fails
                 if (response.data.message === `'from' parameter is not a valid address. please check documentation`) {
-                    setStatus({ error: true, message: t('contactForm.errorMessage') })
+                    setStatus({ error: true, message: t('contactForm.errorMessage'), isSending: false } )
                 } else if (response.data === 'Poruka poslata') {
-                    setStatus({ error: false, message: null, success: true })
+                    setStatus({ error: false, message: null, success: true, isSending:false })
                     resetName()
                     resetEmail()
                     resetMessage()
@@ -59,8 +63,9 @@ function ContactForm(props) {
     }
    
     return (
-        <div>
+        <div className="contact__form">
             <form onSubmit={handleSubmit}>
+                {status.isSending ? <p> saljem </p> : null}
                 {status.error ? <p> {status.message}</p> : null}
                 {status.success ? <p> uspesno poslata poruka </p> : null}
                 <label>
@@ -73,9 +78,17 @@ function ContactForm(props) {
                 </label>
                 <label>
                     {t('contactForm.messageLabel')}:
-                <input type="text" placeholder={t('contactForm.message')} {...bindMessage} required/>
+                    <textarea rows="4" cols="50" placeholder={t('contactForm.message')} {...bindMessage} required>
+                    </textarea>
+                {/* <input type="text" placeholder={t('contactForm.message')} {...bindMessage} required/> */}
                 </label>
-                <input type="submit" value={t('contactForm.send')} />
+                <button 
+                    type="submit"
+                    disabled={status.isSending}
+                >
+                    {status.isSending ? <StyledLoading /> : t('contactForm.send') }
+                </button>
+                
             </form>
 
         </div>

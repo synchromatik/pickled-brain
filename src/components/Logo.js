@@ -14,12 +14,7 @@ import { motion } from 'framer-motion'
                 > 
                     <Sogo className="svg"/>
                 </motion.div>
-                {/* <div className="tagline">
-                    <h1>Pickled Brain Tattoo Studio</h1>
-                    <h5>Belgrade, Serbia</h5>
-                </div> */}
             </div>
-            
         </div>
     )
  }
