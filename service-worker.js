@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pickled-brain/precache-manifest.975eb4e81d6541f72453dc7dd98d784b.js"
+  "/pickled-brain/precache-manifest.ed9cd372255a9a4aa8f4d674e50e7d5c.js"
 );
 
 self.addEventListener('message', (event) => {
