@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/pickled-brain/static/css/main.c2027afc.chunk.css",
-    "main.js": "/pickled-brain/static/js/main.bfbf0963.chunk.js",
-    "main.js.map": "/pickled-brain/static/js/main.bfbf0963.chunk.js.map",
+    "main.css": "/pickled-brain/static/css/main.cc743fc5.chunk.css",
+    "main.js": "/pickled-brain/static/js/main.fabaf81b.chunk.js",
+    "main.js.map": "/pickled-brain/static/js/main.fabaf81b.chunk.js.map",
     "runtime~main.js": "/pickled-brain/static/js/runtime~main.b44b36c9.js",
     "runtime~main.js.map": "/pickled-brain/static/js/runtime~main.b44b36c9.js.map",
-    "static/js/2.a52e7e77.chunk.js": "/pickled-brain/static/js/2.a52e7e77.chunk.js",
-    "static/js/2.a52e7e77.chunk.js.map": "/pickled-brain/static/js/2.a52e7e77.chunk.js.map",
+    "static/css/2.6639d161.chunk.css": "/pickled-brain/static/css/2.6639d161.chunk.css",
+    "static/js/2.31e2a8dc.chunk.js": "/pickled-brain/static/js/2.31e2a8dc.chunk.js",
+    "static/js/2.31e2a8dc.chunk.js.map": "/pickled-brain/static/js/2.31e2a8dc.chunk.js.map",
     "index.html": "/pickled-brain/index.html",
-    "precache-manifest.bb9a12ada9f67518b8f7746d000c695c.js": "/pickled-brain/precache-manifest.bb9a12ada9f67518b8f7746d000c695c.js",
+    "precache-manifest.2033c54329703f378cfd66b9a776fd88.js": "/pickled-brain/precache-manifest.2033c54329703f378cfd66b9a776fd88.js",
     "service-worker.js": "/pickled-brain/service-worker.js",
-    "static/css/main.c2027afc.chunk.css.map": "/pickled-brain/static/css/main.c2027afc.chunk.css.map"
+    "static/css/2.6639d161.chunk.css.map": "/pickled-brain/static/css/2.6639d161.chunk.css.map",
+    "static/css/main.cc743fc5.chunk.css.map": "/pickled-brain/static/css/main.cc743fc5.chunk.css.map",
+    "static/media/main.scss": "/pickled-brain/static/media/lang-switcher.ce1d09b1.png",
+    "static/media/loading.e26ffd00.svg": "/pickled-brain/static/media/loading.e26ffd00.svg",
+    "static/media/logo.57d68d6c.svg": "/pickled-brain/static/media/logo.57d68d6c.svg"
   }
 }
