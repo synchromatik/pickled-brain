@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "05927967ba233f906d284cf94427557a",
+    "revision": "bf02537a3305acb7cc7d3755c770078e",
     "url": "/pickled-brain/index.html"
   },
   {
@@ -8,15 +8,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pickled-brain/static/css/2.6639d161.chunk.css"
   },
   {
-    "revision": "5f8122a885e0a77456d7",
-    "url": "/pickled-brain/static/css/main.cc743fc5.chunk.css"
+    "revision": "bce794d12183b6f8a810",
+    "url": "/pickled-brain/static/css/main.9b3bec3b.chunk.css"
   },
   {
     "revision": "bcda6a7ffa10f8962d0c",
     "url": "/pickled-brain/static/js/2.31e2a8dc.chunk.js"
   },
   {
-    "revision": "5f8122a885e0a77456d7",
+    "revision": "bce794d12183b6f8a810",
     "url": "/pickled-brain/static/js/main.fabaf81b.chunk.js"
   },
   {

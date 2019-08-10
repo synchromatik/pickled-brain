@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pickled-brain/static/css/main.cc743fc5.chunk.css",
+    "main.css": "/pickled-brain/static/css/main.9b3bec3b.chunk.css",
     "main.js": "/pickled-brain/static/js/main.fabaf81b.chunk.js",
     "main.js.map": "/pickled-brain/static/js/main.fabaf81b.chunk.js.map",
     "runtime~main.js": "/pickled-brain/static/js/runtime~main.b44b36c9.js",
@@ -9,10 +9,10 @@
     "static/js/2.31e2a8dc.chunk.js": "/pickled-brain/static/js/2.31e2a8dc.chunk.js",
     "static/js/2.31e2a8dc.chunk.js.map": "/pickled-brain/static/js/2.31e2a8dc.chunk.js.map",
     "index.html": "/pickled-brain/index.html",
-    "precache-manifest.2033c54329703f378cfd66b9a776fd88.js": "/pickled-brain/precache-manifest.2033c54329703f378cfd66b9a776fd88.js",
+    "precache-manifest.975eb4e81d6541f72453dc7dd98d784b.js": "/pickled-brain/precache-manifest.975eb4e81d6541f72453dc7dd98d784b.js",
     "service-worker.js": "/pickled-brain/service-worker.js",
     "static/css/2.6639d161.chunk.css.map": "/pickled-brain/static/css/2.6639d161.chunk.css.map",
-    "static/css/main.cc743fc5.chunk.css.map": "/pickled-brain/static/css/main.cc743fc5.chunk.css.map",
+    "static/css/main.9b3bec3b.chunk.css.map": "/pickled-brain/static/css/main.9b3bec3b.chunk.css.map",
     "static/media/main.scss": "/pickled-brain/static/media/lang-switcher.ce1d09b1.png",
     "static/media/loading.e26ffd00.svg": "/pickled-brain/static/media/loading.e26ffd00.svg",
     "static/media/logo.57d68d6c.svg": "/pickled-brain/static/media/logo.57d68d6c.svg"
