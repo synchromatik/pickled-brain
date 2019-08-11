@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as Sogo } from '../images/logo.svg'
+import { ReactComponent as Sogo } from '../../images/logo.svg'
 import { motion } from 'framer-motion'
 
  const Logo = () => {

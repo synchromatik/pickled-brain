@@ -2,17 +2,17 @@ import React from 'react'
 import Images from './Images'
 import Modal from './Modal'
 import { motion } from 'framer-motion'
-import { useStateValue } from '../state'
+import { useStateValue } from '../../state'
 
 import Logo from './Logo'
 
 function Gallery() {
-    const [{ modal, index, images }, dispatch] = useStateValue();
+    const [{ modal, index, images, lang }, dispatch] = useStateValue();
     
     return (
         <React.Fragment>
             <div className="galery">
-                <Logo />
+                <Logo verzija={lang} />
 
                 {images.map(image => (
                     <Images

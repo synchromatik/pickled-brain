@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import MapGL, { Marker, GeolocateControl} from 'react-map-gl'
 
 import 'mapbox-gl/dist/mapbox-gl.css'
-import mapicon from '../images/map-icon.png'
+import mapicon from '../../images/map-icon.png'
 
 const TOKEN = 'pk.eyJ1Ijoic3luY2hyb21hdGlrIiwiYSI6ImZFT3lpWTQifQ.tbfmNm3pK7VtS-kwMNUCTA'
 const geolocateStyle = {
@@ -19,8 +19,8 @@ const InitialState = {
         longitude: 20.452809,
         zoom: 17.8,
         width: '100%',
-        height: 500,
-        dragPan: true
+        height: 400,
+        mapStyle: "mapbox://styles/mapbox/streets-v11"
     }
 }
 
@@ -78,6 +78,9 @@ function Mapa() {
                     setGdeSam(InitialState)}>
                         Move me back to pb
                 </button>
+                <div>
+                <div class="fb-like" data-href="https://www.facebook.com/PickledBrainTattooStudio" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                </div>
         </div>
     )
 }

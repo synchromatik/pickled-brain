@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactForm from '../components/ContactForm'
+import ContactForm from './ContactForm'
 import Info from './Info'
 import { useTranslation } from 'react-i18next'
 

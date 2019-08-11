@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react';
-import Gallery from './Gallery'
-import Contact from './Contact'
-import ImageList from './ImageList.js'
-import Mapa from './Map'
+import Gallery from './Gallery/Gallery'
+import Contact from './Info/Contact'
+import ImageList from './Gallery/ImageList.js'
+import Mapa from './Footer/Map'
 import { StateProvider } from '../state'
 import '../styles/main.scss'
-import LangSwitcher from './LangSwitcher'
+import LangSwitcher from './Header/LangSwitcher'
 
 // loading component for suspense fallback
 const Loader = () => (
@@ -54,7 +54,7 @@ function App() {
 			<Suspense fallback={<Loader />}>
 				<div className="wrapper">
 					<LangSwitcher />
-					<Gallery />
+					<Gallery scrollPosition={[0,0]}/>
 					<Contact />
 					<footer className="footer">
 						<Mapa />

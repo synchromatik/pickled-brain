@@ -16,7 +16,13 @@
         "email": "Email",
         "messageLabel": "Poruka",
         "message": "Opisite nam sta vam treba",
-        "send": "Posalji",
-        "errorMessage": "Proverite formu i popunite sva polja pravilno"
+        "sendButton": "Posalji",
+        "errorMessage": "Proverite formu i popunite sva polja pravilno",
+        "sendingMessage": "Saljemo poruku",
+        "sendingButton": "Saljem",
+        "sent": "Poslato"
+    },
+    "ui": {
+        "lang": "Srpski"
     }
 }

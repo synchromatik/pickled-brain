@@ -6,22 +6,42 @@ label {
         width: 100%;
         padding: 10px;
         margin-top: 5px;
-        font-size: 1.1rem
+        font-size: 16px;
+
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: none;
+
+        &::placeholder {
+            color: $dark-gray;
+            font-size: 14px;
+            font-family: $font-family-pickled-brain;
+        }
+        &:focus {
+            border:1px solid $brand-pink;
+        }
     }
 }
 
-    button,
-    input[type=submit] {
-        background: $black;
-        padding: 20px;
-        color: $white;
-        border: 0;
-        &:hover {
-            cursor: pointer;
-        }
+button,
+input[type=submit] {
+    background: $brand-pink;
+    padding: 10px;
+    color: $white;
+    border: 0;
+    font-size: 22px;
+    font-family: $font-family-pickled-brain;
+    border-bottom: 2px solid $brand-pink;
+    &:hover {
+        cursor: pointer;
+        border-bottom: 2px solid $black;
     }
+}
 
-    button:disabled {
-        cursor: not-allowed;
-        opacity: 0.9;
-    }
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+

@@ -16,7 +16,13 @@
         "email": "Your Email - so we can replay",
         "messageLabel": "Message",
         "message": "Let us know what you need",
-        "send": "Send",
-        "errorMessage": "Please check the form fields for errors"
+        "sendButton": "Send",
+        "errorMessage": "Please check the form fields for errors",
+        "sendingMessage": "Sending your message",
+        "sendingButton": "Sending",
+        "sent": "Success!"
+    },
+    "ui": {
+        "lang": "English"
     }
 }

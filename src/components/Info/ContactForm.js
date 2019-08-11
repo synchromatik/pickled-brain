@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import useInput from './useInput'
-import StyledLoading from './Loading'
 import { useTranslation } from 'react-i18next';
 import axios from "axios"
 
@@ -65,9 +64,9 @@ function ContactForm(props) {
     return (
         <div className="contact__form">
             <form onSubmit={handleSubmit}>
-                {status.isSending ? <p> saljem </p> : null}
+                {status.isSending ? <p> {t('contactForm.sendingMessage')} </p> : null}
                 {status.error ? <p> {status.message}</p> : null}
-                {status.success ? <p> uspesno poslata poruka </p> : null}
+                {status.success ? <p> {t('contactForm.sent')} </p> : null}
                 <label>
                     {t('contactForm.name')}:
                 <input type="text" name="name" placeholder={t('contactForm.name')} {...bindName} required/>
@@ -86,7 +85,7 @@ function ContactForm(props) {
                     type="submit"
                     disabled={status.isSending}
                 >
-                    {status.isSending ? <StyledLoading /> : t('contactForm.send') }
+                    {status.isSending ? t('contactForm.sendingButton') : t('contactForm.sendButton') }
                 </button>
                 
             </form>

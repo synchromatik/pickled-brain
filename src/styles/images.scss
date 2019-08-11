@@ -8,6 +8,7 @@
             margin-top: -35px;
             z-index: 998;
             margin-bottom: 20px;
+            pointer-events: none;
             @media (min-width: $screen-xs) {
                 margin-top: auto;
                 z-index: 0;

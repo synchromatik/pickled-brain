@@ -23,7 +23,10 @@ $wrapper-width: 	$screen-lg;
 
 $white:                     #fff;
 $gray:                      #d7d7d7;
+$dark-gray:                 #9a9a9a;
 $black:                     #000000;
+$brand-green:               #b0d058;
+$brand-pink:                #d186ac;
 $font-family-pickled-brain: 'Lexend Deca', Arial, sans-serif;
 
 @mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $default) {

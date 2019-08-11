@@ -2,7 +2,11 @@
 
     &__info, 
     &__form {
-        padding: 100px;
+        padding: 0 50px 50px 50px;
+
+        @media (min-width: $screen-md) {
+			padding: 100px;
+		}
     }
     
     form {
