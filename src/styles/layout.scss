@@ -51,5 +51,18 @@ body {
 	}
 	.footer {
 		grid-area: footer;
+		.about {
+			& > div:nth-child(1) {
+				display: none;
+			}
+			display: grid;
+			grid-template-columns: 100%;
+			@media (min-width: $screen-md) {
+				& > div:nth-child(1) {
+					display: block;
+				}
+				grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+			}
+		}
 	}
 }

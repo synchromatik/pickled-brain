@@ -1,0 +1,22 @@
+
+.footer {
+    img {
+        max-width: 100%;
+        display: block;
+    }
+    .carousel {
+        background: url('../images/bg1.jpg');
+        background-position: top center;
+        min-height: 420px;
+    }
+    .sanja {
+        background: url('../images/image-sanja.jpg');
+        background-position: top center;
+        background-size: cover;
+        min-height: 420px;
+    }
+    .details {
+        background: $brand-green;
+        padding: 50px;
+    }
+}

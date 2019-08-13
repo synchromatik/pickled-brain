@@ -3,6 +3,7 @@ import Gallery from './Gallery/Gallery'
 import Contact from './Info/Contact'
 import ImageList from './Gallery/ImageList.js'
 import Mapa from './Footer/Map'
+import About from './Footer/About'
 import { StateProvider } from '../state'
 import '../styles/main.scss'
 import LangSwitcher from './Header/LangSwitcher'
@@ -57,6 +58,7 @@ function App() {
 					<Gallery scrollPosition={[0,0]}/>
 					<Contact />
 					<footer className="footer">
+						<About />
 						<Mapa />
 					</footer>
 				</div>
