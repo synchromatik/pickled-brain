@@ -4,7 +4,7 @@ import MapGL, { Marker, GeolocateControl} from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import mapicon from '../../images/map-icon.png'
 
-const TOKEN = 'pk.eyJ1Ijoic3luY2hyb21hdGlrIiwiYSI6ImZFT3lpWTQifQ.tbfmNm3pK7VtS-kwMNUCTA'
+const TOKEN = 'pk.eyJ1Ijoic3luY2hyb21hdGlrIiwiYSI6ImNrMjViajZxNTEyMG4zbm1xNG9oNzBldmUifQ.7LKfs33uDUzLePh054m3LA'
 const geolocateStyle = {
     position: 'absolute',
     top: 0,
@@ -28,14 +28,14 @@ function Mapa() {
     // Use initial state
     const [gdesam, setGdeSam] = useState(InitialState)
     //const _onViewportChange = viewportNew => console.log(viewportNew)
-    //Update viewport on LOCATE ME 
-    const _onViewportChange = viewportNew => setGdeSam({ 
-        viewport: { 
-            ...gdesam.viewport, 
-            latitude: viewportNew.latitude, 
+    //Update viewport on LOCATE ME
+    const _onViewportChange = viewportNew => setGdeSam({
+        viewport: {
+            ...gdesam.viewport,
+            latitude: viewportNew.latitude,
             longitude: viewportNew.longitude,
             zoom: 13.8
-        }  
+        }
     })
 
     return (
@@ -58,9 +58,10 @@ function Mapa() {
                     positionOptions={{ enableHighAccuracy: true }}
                     trackUserLocation={true}
                 />
-                
+                :x
+
             </MapGL>
-                <button onClick={() => 
+                <button onClick={() =>
                     setGdeSam({
                             viewport: { ...gdesam.viewport, zoom: gdesam.viewport.zoom + 1}
                         })
@@ -74,7 +75,7 @@ function Mapa() {
                 }>
                     Zoom out
                 </button>
-                <button onClick={() => 
+                <button onClick={() =>
                     setGdeSam(InitialState)}>
                         Move me back to pb
                 </button>
