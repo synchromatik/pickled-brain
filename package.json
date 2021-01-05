@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://synchromatik.github.io/pickled-brain",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "gh-pages": "^2.0.1",
     "i18next": "^17.0.7",
     "i18next-browser-languagedetector": "^3.0.1",
